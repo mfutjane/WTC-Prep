@@ -56,7 +56,7 @@ int    main(int argc, char **argv)
 
     i = 1;
     if(argc > 2)
-        selection_sort(argc, argv);
+        selection_sort(argc-1, argv);
     while(i < (argc - 1)
     {
         ft_putstr(argv[i]);
@@ -64,5 +64,4 @@ int    main(int argc, char **argv)
         i++;
     }
     return 0;
-}
 }
