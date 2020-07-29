@@ -5,9 +5,9 @@ int    ft_count_if(char **tab, int(*f)(char*))
 
     i = 0;
     count = 0;
-    while(//tab[i] != NULL?)
+    while(tab[i]) // Helped by David Chappie. Thank you
     {
-        if((*f)(tab[i]) == 1)
+        if(f(tab[i]) == 1)
             count++;
         i++;
     }
