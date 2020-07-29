@@ -39,6 +39,7 @@ void    selection_sort(int str_count, char **strings)
         {
             if(ft_strcmp(strings[temp_min], strings[min_candidate]) > 0)
                 temp_min = min_candidate;
+            min_candidate++;
         }
         temp = argv[unsorted_index];
         argv[unsorted_index] = argv[temp_min];
