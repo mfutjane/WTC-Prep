@@ -41,13 +41,13 @@ void    selection_sort(int str_count, char **strings)
                 temp_min = min_candidate;
             min_candidate++;
         }
-        temp = argv[unsorted_index];
-        argv[unsorted_index] = argv[temp_min];
-        argv[temp_min] = temp;
+        temp = strings[unsorted_index];
+        strings[unsorted_index] = strings[temp_min];
+        strings[temp_min] = temp;
 
         unsorted_index++;
-        temp_min = unsorted_min;
-        min_candidate = unsorted_min + 1;
+        temp_min = unsorted_index;
+        min_candidate = unsorted_index + 1;
     }
 }
 
@@ -58,7 +58,7 @@ int    main(int argc, char **argv)
     i = 1;
     if(argc > 2)
         selection_sort(argc-1, argv);
-    while(i < (argc - 1)
+    while(i < (argc - 1))
     {
         ft_putstr(argv[i]);
         ft_putstr("\n");
